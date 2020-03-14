@@ -30,7 +30,7 @@ const anagramChecker = str => {
     str = str.toLowerCase().split('');
     str.forEach(item => item in temp ? temp[item]++ : temp[item] = 1);
 
-    if (!couple(Object.keys(temp))) removeCoupleValues();
+    removeCoupleValues();
 
     const keys = Object.keys(temp).length,
         values = Object.values(temp);
